@@ -37,16 +37,16 @@
 
 
 
-        $el.find('.touch_btnwarp').on('touchstart', 'a[node-type="btn-l"]', function() {
+        $el.find('a[node-type="btn-l"]').on('click', function() {
             group.left();
             // numobj.text('L');
-        }).on('touchstart', 'a[node-type="btn-r"]', function() {
+        })
+
+        $el.find('a[node-type="btn-r"]').on('click',function() {
             group.right();
             // numobj.text('R');
-        }).on('touchstart','a[node-type="btn-reset"]',function(){
-            group.reset();
         });
-        mask.on('click','a.errbtn',function(){
+        mask.find('a.errbtn').on('click',function(){
             group.reset();
         });
 
