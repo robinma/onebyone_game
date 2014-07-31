@@ -1,0 +1,131 @@
+.transparent-background {
+  background-color: transparent;
+  zoom: 1; }
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  font-size: 1em;
+  font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+  color: #000;
+  -webkit-text-size-adjust: none;
+  background: #212121; }
+
+.main {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  max-width: 640px;
+  font-size: 16px;
+  height: 100%; }
+
+@media screen and (min-width: 480px) {
+  .main {
+    font-size: 24px; } }
+@media screen and (min-width: 640px) {
+  .main {
+    font-size: 32px; } }
+.m_contenier {
+  position: relative;
+  height: 100%; }
+  .m_contenier .version {
+    font-size: 0.75em;
+    color: #999; }
+  .m_contenier .score {
+    display: block;
+    background: #009688;
+    height: 9.375em;
+    margin: 0 auto;
+    width: 9.375em;
+    border-radius: 9.375em;
+    text-align: center;
+    color: #fff;
+    line-height: 9.375em;
+    position: relative;
+    margin-top: 1.25em;
+    overflow: hidden; }
+    .m_contenier .score .txt {
+      position: relative;
+      z-index: 5; }
+      .m_contenier .score .txt b {
+        font-size: 2em; }
+    .m_contenier .score .score_txt {
+      position: absolute;
+      right: 2em;
+      bottom: 2em;
+      display: block;
+      height: 0.75em;
+      line-height: 1em;
+      font-style: normal; }
+    .m_contenier .score .score_l, .m_contenier .score .score_r {
+      display: block;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      display: none; }
+    .m_contenier .score .score_l {
+      left: 0; }
+    .m_contenier .score .score_r {
+      right: 0; }
+  .m_contenier .touch_warp {
+    margin: 2.8125em auto;
+    width: 16.25em; }
+  .m_contenier .touch_btnwarp {
+    overflow: hidden;
+    overflow: hidden;
+    border-radius: 0.125em; }
+    .m_contenier .touch_btnwarp .btnitem {
+      display: block;
+      width: 50%;
+      height: 5.625em;
+      float: left;
+      text-align: center;
+      line-height: 5.625em;
+      background-image: -webkit-repeating-linear-gradient(top, #009688, #00695c);
+      background-image: -o-repeating-linear-gradient(top, #009688, #00695c);
+      background-image: repeating-linear-gradient(to bottom, #009688, #00695c); }
+      .m_contenier .touch_btnwarp .btnitem b {
+        color: #fff; }
+    .m_contenier .touch_btnwarp .btnitem:nth-child(1) {
+      border-right: 1px solid #80cbc4; }
+
+.screen_mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  vertical-align: middle;
+  display: none; }
+  .screen_mask .errtip_warp {
+    height: 12.5em;
+    margin: 1.5625em 0; }
+  .screen_mask .tips_txt {
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+    line-height: 2em; }
+  .screen_mask .errbtn {
+    display: block;
+    width: 10.3125em;
+    height: 10.3125em;
+    border-radius: 10.3125em;
+    background-image: -webkit-repeating-linear-gradient(top, #eeeeee, #e0e0e0);
+    background-image: -o-repeating-linear-gradient(top, #eeeeee, #e0e0e0);
+    background-image: repeating-linear-gradient(to bottom, #eeeeee, #e0e0e0);
+    margin: 0 auto;
+    text-align: center;
+    line-height: 10.3125em; }
+    .screen_mask .errbtn .t {
+      font-size: 2em;
+      font-weight: bold;
+      color: #666; }
