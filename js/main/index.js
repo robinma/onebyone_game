@@ -37,16 +37,16 @@
 
 
 
-        $el.find('a[node-type="btn-l"]').on('click', function() {
+        $el.find('a[node-type="btn-l"]').tap(function() {
             group.left();
             // numobj.text('L');
         })
 
-        $el.find('a[node-type="btn-r"]').on('click',function() {
+        $el.find('a[node-type="btn-r"]').tap(function() {
             group.right();
             // numobj.text('R');
         });
-        mask.find('a.errbtn').on('click',function(){
+        mask.find('a.errbtn').tap(function(){
             group.reset();
         });
 
