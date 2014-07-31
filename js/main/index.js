@@ -20,7 +20,7 @@
         });
 
         group.setDefine(function(){
-            partMash.hidden();
+            partMash.hide();
             numobj.text(result[0]);
         });
 
