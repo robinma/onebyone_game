@@ -7,7 +7,7 @@
     };
     var appTodo = function() {
         var numobj = $el.find('b[node-type="num"]');
-        var partMash=$el.find('div[node-type="sm"');
+        var partMash=$el.find('div[node-type="sm"]');
         var mask= $('.screen_mask');
         var group = new Group();
         group.callback(function(mistake,index,compound,result){
