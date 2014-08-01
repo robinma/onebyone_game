@@ -21,7 +21,8 @@
 
         group.setDefine(function(){
             partMash.hide();
-            numobj.text(result[0]);
+            mask.hide();
+            numobj.text(0);
         });
 
         var renderNumArea=function(){
@@ -36,19 +37,31 @@
         }();
 
 
+        // console.log($el.find('#btn-l').tap)
+        // $('#btn-l').tap(function() {
+        //     group.left();
+        //     // numobj.text('L');
+        // });
 
-        $el.find('a[node-type="btn-l"]').on('tap',function() {
+        // $('#btn-r').tap(function() {
+        //     group.right();
+        //     // numobj.text('R');
+        // });
+        // mask.find('a.errbtn').tap(function(){
+        //     group.reset();
+        // });
+        
+        document.querySelector('#btn-l').addEventListener('touchstart',function(){
+            //numobj.text('L');
             group.left();
-            // numobj.text('L');
-        })
-
-        $el.find('a[node-type="btn-r"]').on('tap',function() {
+        },'false');
+        document.querySelector('#btn-r').addEventListener('touchstart',function(){
             group.right();
-            // numobj.text('R');
-        });
-        mask.find('a.errbtn').on('tap',function(){
+        },'false');
+        document.querySelector('#errbtn').addEventListener('touchstart',function(){
             group.reset();
-        });
+        },'false');
+
 
     };
     var getColor=function(){
@@ -120,7 +133,6 @@
         reset: function(fn) {
            this.flag = [0, 0];
             this.result=[0,0,0];
-            this._callback=null;
             this.mistake=false;//错误 
             this._defineFn();
         },
